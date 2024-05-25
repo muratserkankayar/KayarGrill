@@ -45,6 +45,16 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
+const navbarItems = document.querySelectorAll("[data-navbar-item]");
+
+const deactivateNavbar = function () {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("nav-active");
+}
+
+addEventOnElements(navbarItems, "click", deactivateNavbar);
+
 
 
 /**
